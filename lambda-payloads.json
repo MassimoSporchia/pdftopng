@@ -1,0 +1,34 @@
+{
+    "pdftopng2": {
+        "lambda": {
+            "Records": [
+                {
+                    "eventVersion": "2.2",
+                    "eventSource": "aws:s3",
+                    "awsRegion": "eu-west-1",
+                    "eventName": "event-type",
+                    "userIdentity": {
+                        "principalId": "Amazon-customer-ID-of-the-user-who-caused-the-event"
+                    },
+                    "requestParameters": {
+                        "sourceIPAddress": "ip-address-where-request-came-from"
+                    },
+                    "responseElements": {
+                        "x-amz-request-id": "Amazon S3 generated request ID",
+                        "x-amz-id-2": "Amazon S3 host that processed the request"
+                    },
+                    "s3": {
+                        "s3SchemaVersion": "1.0",
+                        "configurationId": "ID found in the bucket notification configuration",
+                        "bucket": {
+                            "name": "sporchia-source-bucket-pdf"
+                        },
+                        "object": {
+                            "key": "202006_VisitaOculistica.pdf"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
